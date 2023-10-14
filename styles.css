@@ -1,12 +1,18 @@
 body{
     background-color: tomato;
+    background-image: url(images/img1.jpeg);
+    background-size: 100%;
 }
+
 
 h1{
     background-color: black;
     color: azure;
     text-align: center;
     border-radius: 20px;
+}
+p{
+    color: azure;
 }
 
 .text{

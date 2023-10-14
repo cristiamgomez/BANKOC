@@ -6,6 +6,7 @@ h1{
     background-color: black;
     color: azure;
     text-align: center;
+    border-radius: 20px;
 }
 
 .text{

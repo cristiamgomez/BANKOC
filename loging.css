@@ -19,6 +19,7 @@ h2{
 .container{
     width: 30%;
     padding: 10px;
+    border-radius: 20px;
     flex-wrap: wrap;
     position: relative;
     left: 34%;
@@ -26,4 +27,8 @@ h2{
     background-color: black;
     color: azure;
     text-align: center;
+}
+
+input{
+    margin: 10px;
 }

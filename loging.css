@@ -5,13 +5,25 @@ body{
 h1{
     background-color: black;
     color: azure;
+    border-radius: 20px;
     text-align: center;
 }
 
 h2{
     text-align: center;
+    background-color: black;
+    border-radius: 20px;
+    color: azure;
 }
 
 .container{
+    width: 30%;
+    padding: 10px;
+    flex-wrap: wrap;
+    position: relative;
+    left: 34%;
+    text-align: center;
+    background-color: black;
+    color: azure;
     text-align: center;
 }

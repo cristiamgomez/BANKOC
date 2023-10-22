@@ -42,3 +42,19 @@ input{
     background-color: black;
     color: azure;
 }
+
+#anuncio {
+    background: 100% 200px ;
+    background-image:url(images/627b9b132518133.Y3JvcCwxMzgwLDEwODAsMjcwLDA.jpg);
+    background-size: 250px 70px;
+    width: 35%;
+    text-align: center;
+    flex-wrap: wrap;
+    position: relative;
+    left: 35%;
+    border-radius: 10px;
+}
+
+#anuncio p{
+    color: rgb(229, 61, 114);
+}

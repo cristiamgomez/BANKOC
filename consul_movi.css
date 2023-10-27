@@ -11,7 +11,7 @@
     }
    
    section{
-       margin: 15%;
+       margin-top: 15%;
    }
    .register_title{
        text-align: center;
@@ -30,7 +30,6 @@
      font-size: 11px;
      margin-left: 30%;
      margin-right: 30%;
-     padding: 5%;
    } 
    
    .container2 input{
@@ -40,6 +39,6 @@
    
    .input-button {
     width: 40%; 
-    height: 60%; 
-    margin: 5%; 
-}
+    height: 20px; 
+    margin: 5%;
+   }

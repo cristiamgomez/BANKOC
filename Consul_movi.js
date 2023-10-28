@@ -1,15 +1,15 @@
 let sumaTotal = 0;
 const movimientos = []; // Arreglo para almacenar los movimientos
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
 const consignar = document.getElementById('consignar');
 consignar.addEventListener('click', function() {
     const valorIngresado = prompt("Cuanto deseas consignar");
-=======
+// =======
 const Send = document.getElementById('Send');
 Send.addEventListener('click', function() {
     const valorIngresado = prompt("Digite saldo a consignar");
->>>>>>> 81fde24c17dc6c4be768a182ea1ad184614d2306
+// >>>>>>> 81fde24c17dc6c4be768a182ea1ad184614d2306
 
     if (valorIngresado !== null && !isNaN(valorIngresado)) {
         const numero = parseFloat(valorIngresado);
@@ -74,4 +74,3 @@ Exit.addEventListener('click', function() {
 
     window.location.href = '../index.html'; 
 });
-

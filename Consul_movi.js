@@ -3,7 +3,7 @@ const movimientos = []; // Arreglo para almacenar los movimientos
 
 const Send = document.getElementById('Send');
 Send.addEventListener('click', function() {
-    const valorIngresado = prompt("Cuanto deseas consignar");
+    const valorIngresado = prompt("Digite saldo a consignar");
 
     if (valorIngresado !== null && !isNaN(valorIngresado)) {
         const numero = parseFloat(valorIngresado);
@@ -16,7 +16,7 @@ Send.addEventListener('click', function() {
 
         alert(`El valor ${numero} ha sido consignado con éxito.`);
     } else {
-        console.log("No se ingresó un número válido.");
+        console.log("Número inválido");
     }
 });
 
@@ -35,18 +35,18 @@ Withdraw.addEventListener('click', function() {
 
             const valorTotalMostrado = document.getElementById('valorTotal');
 
-            alert(`Se ha retirado ${numeroRetiro} con éxito.`);
+            alert(`Usted ha retirado ${numeroRetiro} exitosamente.`);
         } else {
-            alert("No tienes suficiente dinero para realizar este retiro.");
+            alert("Saldo insuficiente");
         }
     } else {
-        console.log("No se ingresó un número válido para el retiro.");
+        console.log("Datos ingresados no válidos");
     }
 });
 
 const Search = document.getElementById('Search');
 Search.addEventListener('click', function() {
-    alert(`El saldo de tu cuenta es ${sumaTotal} Pesos`);
+    alert(`El saldo en su cuenta es ${sumaTotal} Pesos`);
 });
 
 const Check_move = document.getElementById('Check_move');

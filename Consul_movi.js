@@ -66,3 +66,12 @@ Check_move.addEventListener('click', function() {
     });
     alert(listaMovimientos);
 });
+
+
+const Exit = document.getElementById('Exit');
+
+Exit.addEventListener('click', function() {
+
+    window.location.href = '../index.html'; 
+});
+

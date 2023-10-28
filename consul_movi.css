@@ -3,7 +3,19 @@
     padding: 0;
    }   
 
-   
+   h1{
+    background-color: black;
+    color: azure;
+    border-radius: 20px;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    background-color: black;
+    border-radius: 20px;
+    color: azure;
+}
     body{
        
         background-image: url(images/img1.jpeg);

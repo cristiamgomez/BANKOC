@@ -1,3 +1,5 @@
+/*
+
 document.addEventListener('DOMContentLoaded', function () {
     const consul_movi = document.getElementById('consul_movi');
 
@@ -45,3 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // });
     });
 });
+
+/*
+

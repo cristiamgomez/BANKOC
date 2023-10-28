@@ -44,19 +44,19 @@ Withdraw.addEventListener('click', function() {
     }
 });
 
-const botonConsultar = document.getElementById('consultar');
-botonConsultar.addEventListener('click', function() {
-    alert(`En tu cuenta hay ${sumaTotal} Pesos`);
+const Search = document.getElementById('Search');
+Search.addEventListener('click', function() {
+    alert(`El saldo de tu cuenta es ${sumaTotal} Pesos`);
 });
 
-const mostrarMovimientos = document.getElementById('movimientos');
-mostrarMovimientos.addEventListener('click', function() {
+const Check_move = document.getElementById('Check_move');
+Check_move.addEventListener('click', function() {
     movimientos.forEach(movimiento => {
     });
 
     let listaMovimientos = "Movimientos:\n";
     movimientos.forEach(movimiento => {
-        listaMovimientos += `- ${movimiento}\n`;
+        listaMovimientos += `- ${Check_move}\n`;
     });
     alert(listaMovimientos);
 });

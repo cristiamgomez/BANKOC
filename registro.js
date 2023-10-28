@@ -2,25 +2,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const users = []; // Vector para almacenar usuarios
 
     const registrationForm = document.getElementById('registrationForm');
-    const loginForm = document.getElementById('loginForm');
+    const loginButton = document.getElementById('loginButton');
 
     registrationForm.addEventListener('submit', function (event) {
         event.preventDefault();
-
-        // Obtener los valores de los campos del formulario de registro
         const identification = document.getElementById('identification').value;
         const username = document.getElementById('username').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         const confirmPassword = document.getElementById('confirmPassword').value;
 
-        // Realizar validación básica
         if (identification === '' || username === '' || email === '' || password === '' || confirmPassword === '') {
             alert('Por favor, complete todos los campos.');
         } else if (password !== confirmPassword) {
             alert('Las contraseñas no coinciden.');
         } else {
-            // Si pasa todas las validaciones, agregamos el usuario al vector
             const newUser = {
                 identification,
                 username,
@@ -28,27 +24,30 @@ document.addEventListener('DOMContentLoaded', function () {
                 password
             };
 
-            users.push(newUser); // Agregar usuario al vector
+            users.push(newUser);
             alert('Usuario registrado correctamente.');
-            console.log('Usuarios registrados:', users);
+            window.location.href = 'login.html';
         }
     });
 
-    loginForm.addEventListener('submit', function (event) {
+    loginButton.addEventListener('submit', function (event) {
         event.preventDefault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('pwd').value;
+        let loginSuccess = false;
 
-        // Obtener los valores de los campos del formulario de inicio de sesión
-        const loginEmail = document.getElementById('loginEmail').value;
-        const loginPassword = document.getElementById('loginPassword').value;
+        for (let i = 0; i < users.length; i++) {
+            const user = users[i];
+            if (user.username === username && user.password === password) {
+                alert('Inicio de sesión exitoso');
+                loginSuccess = true;
+                window.location.href = 'consul_movi.html'; // Redirigir a la página deseada después del inicio de sesión exitoso
+                break;
+            }
+        }
 
-        // Buscar si el usuario existe en el vector
-        const foundUser = users.find(user => user.email === loginEmail && user.password === loginPassword);
-
-        if (foundUser) {
-            alert('Inicio de sesión exitoso.');
-            console.log('Bienvenido, ' + foundUser.username + '!');
-        } else {
-            alert('Credenciales incorrectas. Por favor, intente de nuevo.');
+        if (!loginSuccess) {
+            alert('Nombre de usuario o contraseña incorrectos');
         }
     });
 });

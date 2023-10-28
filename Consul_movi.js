@@ -1,8 +1,8 @@
 let sumaTotal = 0;
 const movimientos = []; // Arreglo para almacenar los movimientos
 
-const Send = document.getElementById('Send');
-Send.addEventListener('click', function() {
+const consignar = document.getElementById('consignar');
+consignar.addEventListener('click', function() {
     const valorIngresado = prompt("Cuanto deseas consignar");
 
     if (valorIngresado !== null && !isNaN(valorIngresado)) {
@@ -20,8 +20,8 @@ Send.addEventListener('click', function() {
     }
 });
 
-const Withdraw = document.getElementById('Withdraw');
-Withdraw.addEventListener('click', function() {
+const retirar = document.getElementById('retirar');
+retirar.addEventListener('click', function() {
     const valorRetirar = prompt("Valor a retirar");
 
     if (valorRetirar !== null && !isNaN(valorRetirar)) {

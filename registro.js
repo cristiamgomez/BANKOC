@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const users = []; // Vector para almacenar usuarios
 
     const registrationForm = document.getElementById('registrationForm');
-    const loginButton = document.getElementById('loginButton');
+    const loginForm = document.getElementById('loginForm');
 
     registrationForm.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -30,14 +30,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    loginButton.addEventListener('submit', function (event) {
+    loginForm.addEventListener ('submit', function (event) {
         event.preventDefault();
         const username = document.getElementById('username').value;
         const password = document.getElementById('pwd').value;
         let loginSuccess = false;
 
+        const user = users[i];
         for (let i = 0; i < users.length; i++) {
-            const user = users[i];
             if (user.username === username && user.password === password) {
                 alert('Inicio de sesión exitoso');
                 loginSuccess = true;

@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const users = []; // Vector para almacenar usuarios
-
-    
-
+    const loginButton = document.getElementById('loginButton');
     loginButton.addEventListener('click', function () {
         const username = document.getElementById('username').value;
         const password = document.getElementById('pwd').value;
+
+        const users = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+
         let loginSuccess = false;
 
         for (let i = 0; i < users.length; i++) {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (user.username === username && user.password === password) {
                 alert('Inicio de sesión exitoso');
                 loginSuccess = true;
-                window.location.href = 'consul_movi.html'; // Redirigir a la página deseada después del inicio de sesión exitoso
+                window.location.href = 'consul_movi.html';
                 break;
             }
         }

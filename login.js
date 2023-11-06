@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
         for (let i = 0; i < users.length; i++) {
             const user = users[i];
             if (user.username === username && user.password === password) {
+                window.location.href = "consul_movi.html";
                 alert('Inicio de sesión exitoso');
                 loginSuccess = true;
-                window.location.href = 'consul_movi.html';
                 break;
             }
         }

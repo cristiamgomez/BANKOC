@@ -13,7 +13,7 @@ Send.addEventListener('click', function() {
         console.log(`Consignación de ${numero} pesos`);
 
         const valorTotalMostrado = document.getElementById('valorTotal');
-        valorTotalMostrado.textContent = sumaTotal; // Update the displayed total value in the HTML
+        valorTotalMostrado.textContent = sumaTotal;
 
         alert(`El valor ${numero} ha sido consignado con éxito.`);
     } else {
@@ -34,7 +34,7 @@ Withdraw.addEventListener('click', function() {
             console.log(`Retiro de ${numeroRetiro} pesos`);
 
             const valorTotalMostrado = document.getElementById('valorTotal');
-            valorTotalMostrado.textContent = sumaTotal; // Update the displayed total value in the HTML
+            valorTotalMostrado.textContent = sumaTotal; 
 
             alert(`Usted ha retirado ${numeroRetiro} exitosamente.`);
         } else {
@@ -54,7 +54,7 @@ const Check_move = document.getElementById('Check_move');
 Check_move.addEventListener('click', function() {
     let listaMovimientos = "Movimientos:\n";
     movimientos.forEach(movimiento => {
-        listaMovimientos += `- ${movimiento}\n`; // Fixed typo, 'Check_move' should be 'movimiento'
+        listaMovimientos += `- ${movimiento}\n`; 
     });
     alert(listaMovimientos);
 });

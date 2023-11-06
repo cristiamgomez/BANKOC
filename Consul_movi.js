@@ -1,12 +1,7 @@
 let sumaTotal = 0;
-const movimientos = []; 
+const movimientos = [];
 
 const Send = document.getElementById('Send');
-Send.addEventListener('click', function() {
-    const valorIngresado = prompt("Cuanto deseas consignar");
-const Send = document.getElementById('Send');
-});
-
 Send.addEventListener('click', function() {
     const valorIngresado = prompt("Digite saldo a consignar");
 
@@ -18,6 +13,7 @@ Send.addEventListener('click', function() {
         console.log(`Consignación de ${numero} pesos`);
 
         const valorTotalMostrado = document.getElementById('valorTotal');
+        valorTotalMostrado.textContent = sumaTotal; // Update the displayed total value in the HTML
 
         alert(`El valor ${numero} ha sido consignado con éxito.`);
     } else {
@@ -34,11 +30,11 @@ Withdraw.addEventListener('click', function() {
         if (numeroRetiro <= sumaTotal) {
             sumaTotal -= numeroRetiro;
 
-
             movimientos.push(`Retiro de ${numeroRetiro} pesos`);
             console.log(`Retiro de ${numeroRetiro} pesos`);
 
             const valorTotalMostrado = document.getElementById('valorTotal');
+            valorTotalMostrado.textContent = sumaTotal; // Update the displayed total value in the HTML
 
             alert(`Usted ha retirado ${numeroRetiro} exitosamente.`);
         } else {
@@ -56,16 +52,12 @@ Search.addEventListener('click', function() {
 
 const Check_move = document.getElementById('Check_move');
 Check_move.addEventListener('click', function() {
-    movimientos.forEach(movimiento => {
-    });
-
     let listaMovimientos = "Movimientos:\n";
     movimientos.forEach(movimiento => {
-        listaMovimientos += `- ${Check_move}\n`;
+        listaMovimientos += `- ${movimiento}\n`; // Fixed typo, 'Check_move' should be 'movimiento'
     });
     alert(listaMovimientos);
 });
-
 
 
 const Exit = document.getElementById('Exit');
